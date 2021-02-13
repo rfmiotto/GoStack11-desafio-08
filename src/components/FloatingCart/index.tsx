@@ -18,6 +18,10 @@ import { useCart } from '../../hooks/cart';
 // Calculo do total
 // Navegação no clique do TouchableHighlight
 
+// OBSERVAÇÃO: Note que tanto no componente FLoatingCart quanto no Cart repetimos
+// as funções cartTotal e totalItensInCart. Estamos ferindo DRY.. a gente poderia
+// isolar isso num outro componente, mas não vou fazer isso aqui.
+
 const FloatingCart: React.FC = () => {
   const { products } = useCart();
 
